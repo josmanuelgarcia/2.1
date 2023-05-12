@@ -1,131 +1,90 @@
-package practica2.pkg1;
-
-
-public class Practica21 {
-
-
+package pkg1softwareestudiante;
+import java.util.Scanner;
+public class Main {
     public static void main(String[] args) {
-        // TODO code application logic here
-public class Estudiante {
-    private String nombre;
-    private String paterno;
-    private String materno;
-    private String licenciatura;
-    private int matricula;
-    private float promedio;
-
-    public Estudiante(String nombre, String paterno, String materno, String licenciatura, int matricula, double promedio) {
-        if (nombre.isEmpty()){
-        System.out.println("Error: el nombre no debe estar vacio");
-        } else {
-        this.nombre = nombre;
-        }
+        Estudiante estudiante= new Estudiante("Luis Antonio","Matias","Rivera","Licenciatura en informatica",8210003,9.2);
+        System.out.println("Datos del objeto estudiante");
+        System.out.println(estudiante.getLicenciatura());
+        System.out.println("");
         
-        if (paterno.isEmpty()){
-        System.out.println("Error: el apellido paterno no debe estar vacio");
-        } else {
-        this.paterno = paterno;
-        }
-  if (materno.isEmpty()){
-        System.out.println("Error: el apellido materno no debe estar vacio");
-        } else {
-        this.materno = materno;
-        }
+        Estudiante estudiante01 = new Estudiante("Jose","Martinez","Lopez");
+        System.out.println("Datos del objeto estudiante01");
+        System.out.println(estudiante01.getLicenciatura());
+        System.out.println("");
         
-        if (licenciatura.isEmpty()){
-        System.out.println("Error: la licenciatura no debe estar vacio");
-        } else {
-        this.licenciatura = licenciatura;
-        }
+        Estudiante estudiante02 = new Estudiante();
+        estudiante02.setNombre("Ricardo");
+        estudiante02.setPaterno("Gonzales");
+        estudiante02.setMaterno("Hernandez");
+        estudiante02.setLicenciatura("Licenciatura en Nutricion");
+        estudiante02.setMatricula(22352235);
+        estudiante02.setPromedio((float) 8.8);
+        System.out.println("Datos del objeto estudiante02");
+        System.out.println(estudiante02.getNombre());
+        System.out.println(estudiante02.getPaterno());
+        System.out.println(estudiante02.getMaterno());
+        System.out.println(estudiante02.getLicenciatura());
+        System.out.println(estudiante02.getMatricula());
+        System.out.println(estudiante02.getPromedio());
+        System.out.println("");
         
-        if (matricula >= 0 && matricula <= 10){
-            this.matricula = matricula;
-            System.out.println("Error: debe ser un valor entre 0 y 10");
-        }
+ Scanner x= new Scanner(System.in);
+        String nombre,paterno,materno,licenciatura;
+        int matricula;
+        float promedio;
         
-        if (promedio >= 0 && promedio <= 10){
-            this.promedio = (float) promedio;
-        } else { 
-            System.out.println("Error: debe ser un valor entre 0 y 10");
-        }
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        if (nombre.isEmpty()){
-        System.out.println("Error: el nombre no debe estar vacio");
-        } else {
-        this.nombre = nombre;
-        }
-    }
-  public String getPaterno() {
-        return paterno;
-    }
-
-    public void setPaterno(String paterno) {
-        if (paterno.isEmpty()){
-        System.out.println("Error: el apellido paterno no debe estar vacio");
-        } else {
-        this.paterno = paterno;
-        }
-    }
-
-    public String getMaterno() {
-        return materno;
-    }
-
-    public void setMaterno(String materno) {
-        if (materno.isEmpty()){
-        System.out.println("Error: el apellido materno no debe estar vacio");
-        } else {
-        this.materno = materno;
-        }
-    }
-
-    public String getLicenciatura() {
-        return licenciatura;
-    }
-
-    public void setLicenciatura(String licenciatura) {
-        if (licenciatura.isEmpty()){
-        System.out.println("Error: la licenciatura no debe estar vacio");
-        } else {
-        this.licenciatura = licenciatura;
-        }
-    }
- public int getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(int matricula) {
-        if (matricula >= 0 && matricula <= 10){
-            this.matricula = matricula;
-            System.out.println("Error: debe ser un valor entre 0 y 10");
-        }
-    }
-
-    public float getPromedio() {
-        return promedio;
-    }
-
-    public void setPromedio(float promedio) {
-        if (promedio >= 0 && promedio <= 10){
-            this.promedio = promedio;
-        } else { 
-            System.out.println("Error: debe ser un valor entre 0 y 10");
-        }
-    }
-
-    public Estudiante(String nombre, String paterno, String materno) {
-        this.nombre = nombre;
-        this.paterno = paterno;
-        this.materno = materno;
-    }
-
-    public Estudiante() {
+        Estudiante estudiante03 = new Estudiante();
+        System.out.println("Dame el nombre del estudiante: ");
+        nombre = x.nextLine();
+        estudiante03.setNombre(nombre);
+        
+        System.out.println("Dame el apellido paterno del estudiante: ");
+        paterno = x.nextLine();
+        estudiante03.setPaterno(paterno);
+        
+        System.out.println("Dame el apellido materno del estudiante: ");
+        materno = x.nextLine();
+        estudiante03.setMaterno(materno);
+        
+        System.out.println("Dame la licenciatura del estudiante: ");
+        licenciatura = x.nextLine();
+        estudiante03.setLicenciatura(licenciatura);
+        
+        System.out.println("Dame la matricula del estudiante:");
+        matricula = x.nextInt();
+        estudiante03.setMatricula(matricula);
+        
+        System.out.println("Dame el promedio del estudiante:");
+         promedio = x.nextFloat();
+        estudiante03.setPromedio(promedio);
+  System.out.println("Datos del objeto estudiante03");
+        System.out.println(estudiante03.getNombre());
+        System.out.println(estudiante03.getPaterno());
+        System.out.println(estudiante03.getMaterno());
+        System.out.println(estudiante03.getLicenciatura());
+        System.out.println(estudiante03.getMatricula());
+        System.out.println(estudiante03.getPromedio());
+        System.out.println("");
+        
+        
+        Estudiante estudiante04 = new Estudiante();
+        System.out.println("Datos del objeto estudiante04");
+        estudiante04.setNombre("");
+        estudiante04.setPromedio(30);
+        System.out.println("");
+        
+        Estudiante estudiante05 = new Estudiante();
+        System.out.println("Datos del objeto estudiante05");
+        estudiante05.setNombre("");
+        estudiante05.setPaterno("");
+        System.out.println(""); 
+        
+        System.out.println("Datos del objeto estudiante06");
+        Estudiante estudiante06 = new Estudiante("","Matias","","Informatica",8210003,9.2);
+        estudiante06.setNombre("");
+        estudiante06.setPaterno("");
+        estudiante06.setMaterno("");
+        estudiante06.setPromedio(100);
+        System.out.println("");
     }
-   
 }
