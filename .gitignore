@@ -2,7 +2,7 @@ package pkg1softwareestudiante;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Estudiante estudiante= new Estudiante("Luis Antonio","Matias","Rivera","Licenciatura en informatica",8210003,9.2);
+        Estudiante estudiante= new Estudiante("Jose Manuel","Garcia","Garduño","Licenciatura en informatica",8210017,9.2);
         System.out.println("Datos del objeto estudiante");
         System.out.println(estudiante.getLicenciatura());
         System.out.println("");
@@ -80,7 +80,7 @@ public class Main {
         System.out.println(""); 
         
         System.out.println("Datos del objeto estudiante06");
-        Estudiante estudiante06 = new Estudiante("","Matias","","Informatica",8210003,9.2);
+        Estudiante estudiante06 = new Estudiante("","Garcia","","Informatica",8210017,9.2);
         estudiante06.setNombre("");
         estudiante06.setPaterno("");
         estudiante06.setMaterno("");
